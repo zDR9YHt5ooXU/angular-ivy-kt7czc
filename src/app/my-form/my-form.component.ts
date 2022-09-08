@@ -4,12 +4,10 @@ import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'my-form',
   templateUrl: './my-form.component.html',
+  styleUrls: ['./my-form.component.css'],
 })
-export class MyFormComponent  {
+export class MyFormComponent {
   name = 'Angular ' + VERSION.major;
-  constructor(private fb: FormBuilder) {
-
-  }
-  
+  form = this.fb.group({});
+  constructor(private fb: FormBuilder) {}
 }
-
